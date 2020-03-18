@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   database: {fileID: 11400000, guid: dd8a2e001a2c69a478684c242b57071d, type: 2}
   TargetOrientation: 2
-  BehaviorAtStart: 0
+  BehaviorAtStart: 1
   CustomStartAnchoredPosition: {x: 0, y: 0, z: 0}
-  DeselectAnyButtonSelectedOnHide: 0
+  DeselectAnyButtonSelectedOnHide: 1
   DeselectAnyButtonSelectedOnShow: 0
   DisableCanvasWhenHidden: 1
   DisableGameObjectWhenHidden: 1
