@@ -682,7 +682,10 @@ MonoBehaviour:
     Name: HowToPlay
   m_onEnterHideViews: []
   m_onExitShowViews: []
-  m_onExitHideViews: []
+  m_onExitHideViews:
+  - Category: Main Menu
+    InstantAction: 0
+    Name: HowToPlay
 --- !u!114 &6829824913126988779
 MonoBehaviour:
   m_ObjectHideFlags: 1
