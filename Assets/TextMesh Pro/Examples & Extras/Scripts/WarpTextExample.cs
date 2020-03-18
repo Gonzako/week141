@@ -15,17 +15,25 @@ namespace TMPro.Examples
         public float SpeedMultiplier = 1.0f;
         public float CurveScale = 1.0f;
 
+        private float originalCurve;
+
         void Awake()
         {
             m_TextComponent = gameObject.GetComponent<TMP_Text>();
         }
 
 
-        void Start()
+        void OnEnable()
         {
+            originalCurve = CurveScale;
             StartCoroutine(WarpText());
         }
 
+        private void OnDisable()
+        {
+            CurveScale = originalCurve;
+            StopAllCoroutines();
+        }
 
         private AnimationCurve CopyAnimationCurve(AnimationCurve curve)
         {
