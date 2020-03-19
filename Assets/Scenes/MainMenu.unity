@@ -11901,6 +11901,7 @@ GameObject:
   - component: {fileID: 1279785740}
   - component: {fileID: 1279785739}
   - component: {fileID: 1279785741}
+  - component: {fileID: 1279785742}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -12089,12 +12090,26 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
+    m_PreInfinity: 1
+    m_PostInfinity: 1
     m_RotationOrder: 4
   AngleMultiplier: 29.95
   SpeedMultiplier: 2.73
   CurveScale: 2.14
+--- !u!114 &1279785742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279785737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7970f201c40f2429cce6d88add0794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 50, y: 0}
+  curveToAnimate: {fileID: 1279785741}
 --- !u!1 &1280923235
 GameObject:
   m_ObjectHideFlags: 0

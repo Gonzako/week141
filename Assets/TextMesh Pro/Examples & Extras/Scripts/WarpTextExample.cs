@@ -5,7 +5,7 @@ using System.Collections;
 namespace TMPro.Examples
 {
 
-    public class WarpTextExample : MonoBehaviour
+    public class WarpTextExample : MonoBehaviour, IHaveAnimationCurve
     {
 
         private TMP_Text m_TextComponent;
@@ -16,6 +16,8 @@ namespace TMPro.Examples
         public float CurveScale = 1.0f;
 
         private float originalCurve;
+
+        public AnimationCurve curve { get => VertexCurve; set =>  VertexCurve = value; }
 
         void Awake()
         {
@@ -40,6 +42,8 @@ namespace TMPro.Examples
             AnimationCurve newCurve = new AnimationCurve();
 
             newCurve.keys = curve.keys;
+            newCurve.postWrapMode = curve.postWrapMode;
+            newCurve.preWrapMode = curve.preWrapMode;
 
             return newCurve;
         }
@@ -52,8 +56,8 @@ namespace TMPro.Examples
         /// <returns></returns>
         IEnumerator WarpText()
         {
-            VertexCurve.preWrapMode = WrapMode.Clamp;
-            VertexCurve.postWrapMode = WrapMode.Clamp;
+            //VertexCurve.preWrapMode = WrapMode.Clamp;
+            //VertexCurve.postWrapMode = WrapMode.Clamp;
 
             //Mesh mesh = m_TextComponent.textInfo.meshInfo[0].mesh;
 
@@ -67,11 +71,11 @@ namespace TMPro.Examples
 
             while (true)
             {
-                if (!m_TextComponent.havePropertiesChanged && old_CurveScale == CurveScale && old_curve.keys[1].value == VertexCurve.keys[1].value)
-                {
-                    yield return null;
-                    continue;
-                }
+                //if (!m_TextComponent.havePropertiesChanged && old_CurveScale == CurveScale && old_curve.keys[1].value == VertexCurve.keys[1].value && old_curve.keys[1].time == VertexCurve.keys[1].time)
+                //{
+                //    yield return null;
+                //    continue;
+                //}
 
                 old_CurveScale = CurveScale;
                 old_curve = CopyAnimationCurve(VertexCurve);
@@ -117,8 +121,8 @@ namespace TMPro.Examples
                     // Compute the angle of rotation for each character based on the animation curve
                     float x0 = (offsetToMidBaseline.x - boundsMinX) / (boundsMaxX - boundsMinX); // Character's position relative to the bounds of the mesh.
                     float x1 = x0 + 0.0001f;
-                    float y0 = VertexCurve.Evaluate(x0) * CurveScale;
-                    float y1 = VertexCurve.Evaluate(x1) * CurveScale;
+                    float y0 = VertexCurve.Evaluate(x0+Time.time) * CurveScale;
+                    float y1 = VertexCurve.Evaluate(x1+Time.time) * CurveScale;
 
                     Vector3 horizontal = new Vector3(1, 0, 0);
                     //Vector3 normal = new Vector3(-(y1 - y0), (x1 * (boundsMaxX - boundsMinX) + boundsMinX) - offsetToMidBaseline.x, 0);
