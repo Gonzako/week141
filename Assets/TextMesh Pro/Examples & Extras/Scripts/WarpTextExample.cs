@@ -14,7 +14,7 @@ namespace TMPro.Examples
         public float AngleMultiplier = 1.0f;
         public float SpeedMultiplier = 1.0f;
         public float CurveScale = 1.0f;
-
+        public float timeScale = 1.0f;
         private float originalCurve;
 
         public AnimationCurve curve { get => VertexCurve; set =>  VertexCurve = value; }
@@ -121,8 +121,8 @@ namespace TMPro.Examples
                     // Compute the angle of rotation for each character based on the animation curve
                     float x0 = (offsetToMidBaseline.x - boundsMinX) / (boundsMaxX - boundsMinX); // Character's position relative to the bounds of the mesh.
                     float x1 = x0 + 0.0001f;
-                    float y0 = VertexCurve.Evaluate(x0+Time.time) * CurveScale;
-                    float y1 = VertexCurve.Evaluate(x1+Time.time) * CurveScale;
+                    float y0 = VertexCurve.Evaluate(x0+Time.time*timeScale) * CurveScale;
+                    float y1 = VertexCurve.Evaluate(x1+Time.time*timeScale) * CurveScale;
 
                     Vector3 horizontal = new Vector3(1, 0, 0);
                     //Vector3 normal = new Vector3(-(y1 - y0), (x1 * (boundsMaxX - boundsMinX) + boundsMinX) - offsetToMidBaseline.x, 0);
