@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class simpleSidewaysMovement : MonoBehaviour, IPlayerVelocity
 {
-    public bool lookingRight => side > 0;
+    public float currentDirection => side;
     public float maxVelocity => horizontalVelocity;
 
     [SerializeField]

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class playerGroundCheck : MonoBehaviour, ICheckGround
 {
@@ -16,7 +17,7 @@ public class playerGroundCheck : MonoBehaviour, ICheckGround
     public bool areWeGrounded => castResult.collider != null;
 
     public event Action onTouchGround;
-
+    public GameEvent onGroundTouched;
     // Start is called before the first frame update
     void Start()
     {
