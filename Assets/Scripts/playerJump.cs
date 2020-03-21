@@ -8,7 +8,7 @@ using ScriptableObjectArchitecture;
 public class playerJump : MonoBehaviour
 {
     public FloatGameEvent jumpEvent;
-    public FloatGameEvent peakEvent;
+    public FloatGameEvent peakEvent;        
     public JumpParabola upParav = new JumpParabola(2.5f, 3, 1);
     public JumpParabola fallParav = new JumpParabola(3, 1.5f, 1);
 
@@ -41,7 +41,7 @@ public class playerJump : MonoBehaviour
         if (wantJump)
         {
             currentParav = upParav;
-            jumpEvent?.Raise();
+            jumpEvent?.Raise(upParav.getTimeToPeak(pVel.maxVelocity));
             rb.velocity += currentParav.getStartingVelocity(pVel.maxVelocity) * Vector2.up;
         }
         if(rb.velocity.y < 0 && previousVel.y >= 0)

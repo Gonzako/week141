@@ -31,7 +31,7 @@ public class playerGroundCheck : MonoBehaviour, ICheckGround
         if(prevCastResult.collider == null && castResult.collider != null)
         {
             onTouchGround?.Invoke();
-            onGroundTouched.Raise();
+            onGroundTouched.Raise();        
         }
 
         prevCastResult = castResult;
