@@ -3285,6 +3285,18 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 876145415, guid: 0198d141f993cd24384490b81882ac20, type: 3}
+      propertyPath: scalingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 876145415, guid: 0198d141f993cd24384490b81882ac20, type: 3}
+      propertyPath: ColorModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 876145415, guid: 0198d141f993cd24384490b81882ac20, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 999971671368954928, guid: 0198d141f993cd24384490b81882ac20,
         type: 3}
       propertyPath: m_LocalPosition.x
