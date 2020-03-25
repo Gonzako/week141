@@ -3273,29 +3273,48 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 741486237, guid: 0198d141f993cd24384490b81882ac20, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 741486240, guid: 0198d141f993cd24384490b81882ac20, type: 3}
-      propertyPath: playOnAwake
-      value: 0
+      propertyPath: EmissionModule.rateOverDistance.minMaxState
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 876145415, guid: 0198d141f993cd24384490b81882ac20, type: 3}
-      propertyPath: looping
-      value: 0
+    - target: {fileID: 741486240, guid: 0198d141f993cd24384490b81882ac20, type: 3}
+      propertyPath: EmissionModule.rateOverDistance.minScalar
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 876145415, guid: 0198d141f993cd24384490b81882ac20, type: 3}
-      propertyPath: playOnAwake
-      value: 0
+    - target: {fileID: 741486240, guid: 0198d141f993cd24384490b81882ac20, type: 3}
+      propertyPath: ForceModule.x.minMaxState
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 876145415, guid: 0198d141f993cd24384490b81882ac20, type: 3}
-      propertyPath: scalingMode
-      value: 0
+    - target: {fileID: 741486240, guid: 0198d141f993cd24384490b81882ac20, type: 3}
+      propertyPath: ForceModule.y.minMaxState
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 876145415, guid: 0198d141f993cd24384490b81882ac20, type: 3}
-      propertyPath: ColorModule.enabled
-      value: 1
+    - target: {fileID: 741486240, guid: 0198d141f993cd24384490b81882ac20, type: 3}
+      propertyPath: ForceModule.z.minMaxState
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 876145415, guid: 0198d141f993cd24384490b81882ac20, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.a
-      value: 0
+    - target: {fileID: 876145410, guid: 0198d141f993cd24384490b81882ac20, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 999971671043618621, guid: 0198d141f993cd24384490b81882ac20,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 999971671120212535, guid: 0198d141f993cd24384490b81882ac20,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 999971671347321098, guid: 0198d141f993cd24384490b81882ac20,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 999971671368954928, guid: 0198d141f993cd24384490b81882ac20,
         type: 3}
@@ -3356,6 +3375,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerMaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 999971671368954929, guid: 0198d141f993cd24384490b81882ac20,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0198d141f993cd24384490b81882ac20, type: 3}
