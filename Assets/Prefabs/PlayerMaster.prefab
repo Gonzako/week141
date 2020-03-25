@@ -9720,6 +9720,7 @@ GameObject:
   - component: {fileID: 999971671043618617}
   - component: {fileID: 999971671043618616}
   - component: {fileID: 999971671043618619}
+  - component: {fileID: 999971670369268447}
   m_Layer: 9
   m_Name: GameplayLogic/Player
   m_TagString: Untagged
@@ -9832,7 +9833,43 @@ MonoBehaviour:
     m_Bits: 256
   castRadious: 0.5
   downDistance: 0.05
+  coyoteTime: 0.2
+  coyoteBool: 0
   onGroundTouched: {fileID: 11400000, guid: 40ee3a0accb5c5840a7db4832d8993d9, type: 2}
+--- !u!114 &999971670369268447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999971671043618621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeveloperDescription:
+    _value: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: f9db195deef017c4b87806b2189c2811,
+    type: 2}
+  _event: {fileID: 11400000, guid: f9db195deef017c4b87806b2189c2811, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 999971671043618619}
+        m_MethodName: setCoyoteBool
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &999971671120212535
 GameObject:
   m_ObjectHideFlags: 0

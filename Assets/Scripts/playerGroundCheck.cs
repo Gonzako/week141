@@ -12,7 +12,7 @@ public class playerGroundCheck : MonoBehaviour, ICheckGround
     public float downDistance = 0.5f;
     public float coyoteTime = 0.2f;
 
-    bool coyoteBool = false;
+    public bool coyoteBool = false;
     RaycastHit2D castResult;
     RaycastHit2D prevCastResult;
 
@@ -21,6 +21,11 @@ public class playerGroundCheck : MonoBehaviour, ICheckGround
 
     public event Action onTouchGround;
     public GameEvent onGroundTouched;
+
+    public void setCoyoteBool(bool arg)
+    {
+        coyoteBool = arg;
+    }
 
     // Start is called before the first frame update
     void Start()
