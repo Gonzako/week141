@@ -9831,10 +9831,10 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  castRadious: 0.5
-  downDistance: 0.05
-  coyoteTime: 0.1
-  coyoteBool: 0
+  castRadious: 0.32
+  downDistance: 0.22
+  coyoteTime: 0.05
+  coyoteBool: 1
   onGroundTouched: {fileID: 11400000, guid: 40ee3a0accb5c5840a7db4832d8993d9, type: 2}
 --- !u!114 &999971670369268447
 MonoBehaviour:

@@ -38,6 +38,7 @@ public class playerJump : MonoBehaviour
 
     void FixedUpdate()
     {
+        Debug.Log(rb.velocity);
         if (wantJump)
         {
             currentParav = upParav;
@@ -65,7 +66,7 @@ public class playerJump : MonoBehaviour
         rb.gravityScale = currentParav.getGravScale(pVel.maxVelocity);
     }
 
-    private void queueJump()
+    public void queueJump()
     {
         wantJump = true;
     }
