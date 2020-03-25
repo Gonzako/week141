@@ -42,6 +42,11 @@ public class playerJump : MonoBehaviour
         {
             currentParav = upParav;
             jumpEvent?.Raise(upParav.getTimeToPeak(pVel.maxVelocity));
+            if(rb.velocity.y < 0)
+            {
+                rb.velocity += Vector2.down * rb.velocity.y;
+            }
+
             rb.velocity += currentParav.getStartingVelocity(pVel.maxVelocity) * Vector2.up;
         }
         if(rb.velocity.y < 0 && previousVel.y >= 0)
