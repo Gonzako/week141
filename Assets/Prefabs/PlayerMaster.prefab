@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 741486239}
   - component: {fileID: 741486241}
   - component: {fileID: 741486242}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WalkingParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -919,9 +919,9 @@ ParticleSystem:
         m_RotationOrder: 4
     rateOverDistance:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 2.5
-      minScalar: 0
+      minScalar: 5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2131,7 +2131,7 @@ ParticleSystem:
     enabled: 1
     x:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -2184,7 +2184,7 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 2.5
       minScalar: 0
       maxCurve:
@@ -2237,7 +2237,7 @@ ParticleSystem:
         m_RotationOrder: 4
     z:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -4837,7 +4837,7 @@ GameObject:
   - component: {fileID: 876145414}
   - component: {fileID: 876145413}
   - component: {fileID: 876145412}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: JumpDust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9720,7 +9720,7 @@ GameObject:
   - component: {fileID: 999971671043618617}
   - component: {fileID: 999971671043618616}
   - component: {fileID: 999971671043618619}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameplayLogic/Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9829,7 +9829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 256
   castRadious: 0.5
   downDistance: 0.05
   onGroundTouched: {fileID: 11400000, guid: 40ee3a0accb5c5840a7db4832d8993d9, type: 2}
@@ -9847,7 +9847,7 @@ GameObject:
   - component: {fileID: 999971671120212524}
   - component: {fileID: 999971671120212531}
   - component: {fileID: 999971671120212529}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9982,7 +9982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 999971671347321093}
   - component: {fileID: 999971671347321092}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10063,7 +10063,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 999971671368954928}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerMaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
