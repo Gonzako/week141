@@ -10,14 +10,18 @@ public class playerGroundCheck : MonoBehaviour, ICheckGround
     public LayerMask whatIsGround;
     public float castRadious = 1f;
     public float downDistance = 0.5f;
+    public float coyoteTime = 0.2f;
 
+    bool coyoteBool = false;
     RaycastHit2D castResult;
     RaycastHit2D prevCastResult;
 
-    public bool areWeGrounded => castResult.collider != null;
+
+    public bool areWeGrounded { get { return castResult.collider != null || coyoteBool;  } }
 
     public event Action onTouchGround;
     public GameEvent onGroundTouched;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,10 +35,21 @@ public class playerGroundCheck : MonoBehaviour, ICheckGround
         if(prevCastResult.collider == null && castResult.collider != null)
         {
             onTouchGround?.Invoke();
-            onGroundTouched.Raise();        
+            onGroundTouched.Raise();
+            coyoteBool = true;
+        }
+        if (prevCastResult.collider != null && castResult.collider == null)
+        {
+            StartCoroutine(startCoyoteTime(coyoteTime));
         }
 
         prevCastResult = castResult;
+    }
+
+    IEnumerator startCoyoteTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        coyoteBool = false;
     }
 
     void OnDrawGizmosSelected()
